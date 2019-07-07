@@ -5,7 +5,7 @@ import { isChrome, isMobile } from '../../../shared/helpers.js';
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
-const isDesktop = window.innerWidth > 992
+const isDesktop = window.innerWidth > 992;
 
 class Origins extends React.Component {
   componentDidMount() {
@@ -18,45 +18,38 @@ class Origins extends React.Component {
     return (
       <Fragment>
         <p>
-          { isDesktop ? <Lorem>I</Lorem> : <span>&nbsp;&nbsp;&nbsp;&nbsp;I</span> }
-          n the Spring of 2009, several students of UCSD&rsquo;s Jacobs School
-          of Engineering felt that there was a lack of engineering
-          representation in the Greek community on campus. Luckily an
-          opportunity arose for them to change that.
+          {isDesktop ? <Lorem>I</Lorem> : <span>&nbsp;&nbsp;&nbsp;&nbsp;I</span>}n the Spring of 2009, several students
+          of UCSD&rsquo;s Jacobs School of Engineering felt that there was a lack of engineering representation in the
+          Greek community on campus. Luckily an opportunity arose for them to change that.
         </p>
         <FoundersList>
           &nbsp;&nbsp;&nbsp;&nbsp;With the help of a Theta Tau alumnus,
           <i>&nbsp;Jennifer Young</i>,&nbsp;thirteen founding fathers
           {!isMobile() && (
             <ScrollCrest
-              className="lozad"
+              className=""
               data-src={isChrome ? require('./images/crest.webp') : require('./images/crest.png')}
               alt="Crest"
             />
           )}
-          &nbsp;took the first step towards establishing a chapter of the nation&rsquo;s
-          oldest and largest professional engineering fraternity on the UCSD
-          campus:
-          <i>&nbsp;Ashay Verma</i>,<i>&nbsp;Errynne Bell</i>,
-          <i>&nbsp;Takahiro Kuwayama</i>,<i>&nbsp;Amelia Chu</i>,
-          <i>&nbsp;Xiumei Wu</i>,<i>&nbsp;Chris Lam</i>,
-          <i>&nbsp;Chuong Do</i>,<i>&nbsp;Joe Shao</i>,
-          <i>&nbsp;Michelle Mojica</i>,
-          <i>&nbsp;Tanakorn Best Techajongchareon</i>,<i>&nbsp;Scott Louie</i>
-          ,<i>&nbsp;Alan Leung</i>,&nbsp;and
+          &nbsp;took the first step towards establishing a chapter of the nation&rsquo;s oldest and largest professional
+          engineering fraternity on the UCSD campus:
+          <i>&nbsp;Ashay Verma</i>,<i>&nbsp;Errynne Bell</i>,<i>&nbsp;Takahiro Kuwayama</i>,<i>&nbsp;Amelia Chu</i>,
+          <i>&nbsp;Xiumei Wu</i>,<i>&nbsp;Chris Lam</i>,<i>&nbsp;Chuong Do</i>,<i>&nbsp;Joe Shao</i>,
+          <i>&nbsp;Michelle Mojica</i>,<i>&nbsp;Tanakorn Best Techajongchareon</i>,<i>&nbsp;Scott Louie</i>,
+          <i>&nbsp;Alan Leung</i>,&nbsp;and
           <i>&nbsp;John Phu Nguyen</i>.
         </FoundersList>
         <p>
-          &nbsp;&nbsp;&nbsp;&nbsp;On November 20th, 2010, UCSD was installed as
-          the Epsilon Delta Chapter of Theta Tau.
+          &nbsp;&nbsp;&nbsp;&nbsp;On November 20th, 2010, UCSD was installed as the Epsilon Delta Chapter of Theta Tau.
         </p>
         <FoundersImage
-          className="lozad"
+          className=""
           data-src={isChrome ? require('./images/founders.webp') : require('./images/founders.jpg')}
           alt="Founders"
         />
       </Fragment>
-    )
+    );
   }
 
   render() {
@@ -69,16 +62,12 @@ class Origins extends React.Component {
               <h2>of</h2>
               <h1>Epsilon Delta Chapter</h1>
             </ScrollTitle>
-            { this.body }
+            {this.body}
           </div>
         </div>
       );
     }
-    return (
-      <div>
-        { this.body }
-      </div>
-    );
+    return <div>{this.body}</div>;
   }
 }
 

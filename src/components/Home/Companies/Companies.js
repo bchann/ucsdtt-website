@@ -23,7 +23,7 @@ function Companies() {
             <LargeCompany key={i}>
               <a href={company.href} target="_blank" rel="noopener noreferrer">
                 <CompanyImage
-                  className="lozad"
+                  className=""
                   data-src={isChrome ? company.image : company.safari}
                   href={company}
                   alt="Large Company"
@@ -36,11 +36,7 @@ function Companies() {
           {sortedSmallCompanies.map((company, i) => (
             <SmallCompany key={i}>
               <a href={company.href} target="_blank" rel="noopener noreferrer">
-                <CompanyImage
-                  className="lozad"
-                  data-src={isChrome ? company.image : company.safari}
-                  alt="Small Company"
-                />
+                <CompanyImage className="" data-src={isChrome ? company.image : company.safari} alt="Small Company" />
               </a>
             </SmallCompany>
           ))}
@@ -80,10 +76,10 @@ const SmallCompanies = styled(Grid)`
 const LargeCompany = styled.div`
   width: 320px;
 
-  @media(max-width: 992px) {
+  @media (max-width: 992px) {
     width: 300px;
   }
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     width: 220px;
   }
 `;
@@ -91,10 +87,10 @@ const LargeCompany = styled.div`
 const SmallCompany = styled.div`
   width: 120px;
 
-  @media(max-width: 992px) {
+  @media (max-width: 992px) {
     width: 110px;
   }
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     width: 100px;
   }
 `;

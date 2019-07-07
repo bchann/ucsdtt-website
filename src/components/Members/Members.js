@@ -35,38 +35,34 @@ export default class Members extends Component {
 
   /* Runs when component mounts */
   componentDidMount() {
-    const image = document.getElementsByClassName('brothers-image');
-    let actives = [];
-    let eboard = [];
-    let cabinet = [];
-    let alumni = [];
-    let allBrothers = [];
-
-    brothers.forEach(brother => {
-      if (brother.eboard) {
-        eboard.push(brother);
-      } else if (brother.cabinet) {
-        cabinet.push(brother);
-      } else if (brother.position === 'Alumni') {
-        alumni.push(brother);
-      } else {
-        actives.push(brother);
-      }
-      allBrothers.push(brother);
-    });
-
-    sort(cabinet);
-
-    const members = eboard.concat(cabinet).concat(actives);
-
-    this.setState({
-      image,
-      brothers: members,
-      alumni,
-      allBrothers: allBrothers,
-      updatedBrothers: members,
-      filteredBrothers: members
-    });
+    // const image = document.getElementsByClassName('brothers-image');
+    // let actives = [];
+    // let eboard = [];
+    // let cabinet = [];
+    // let alumni = [];
+    // let allBrothers = [];
+    // brothers.forEach(brother => {
+    //   if (brother.eboard) {
+    //     eboard.push(brother);
+    //   } else if (brother.cabinet) {
+    //     cabinet.push(brother);
+    //   } else if (brother.position === 'Alumni') {
+    //     alumni.push(brother);
+    //   } else {
+    //     actives.push(brother);
+    //   }
+    //   allBrothers.push(brother);
+    // });
+    // sort(cabinet);
+    // const members = eboard.concat(cabinet).concat(actives);
+    // this.setState({
+    //   image,
+    //   brothers: members,
+    //   alumni,
+    //   allBrothers: allBrothers,
+    //   updatedBrothers: members,
+    //   filteredBrothers: members
+    // });
   }
 
   get brotherModal() {

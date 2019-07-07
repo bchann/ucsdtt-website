@@ -12,21 +12,21 @@ import { Footer } from './Footer/Footer.js';
 
 export default class Home extends Component {
   /*
-   * Initializes lozad for lazy loading images and onscroll watcher to
+   * Initializes  for lazy loading images and onscroll watcher to
    * handle Safari differences, the navbar color, and the rotating gears
    * in the AboutUs section
    */
   componentDidMount() {
-    const observer = window.lozad('.lozad', {
-      load: function(el) {
-        el.src = el.dataset.src;
-        el.onload = function() {
-          el.classList.add('fadeIn');
-        };
-      },
-      rootMargin: '200px 0px'
-    }); // lazy loads elements with default selector as '.lozad'
-    observer.observe();
+    // const observer = window.('.', {
+    //   load: function(el) {
+    //     el.src = el.dataset.src;
+    //     el.onload = function() {
+    //       el.classList.add('fadeIn');
+    //     };
+    //   },
+    //   rootMargin: '200px 0px'
+    // }); // lazy loads elements with default selector as '.'
+    // observer.observe();
 
     /* Runs when you scroll */
     window.onscroll = function() {

@@ -5,31 +5,28 @@ import React from 'react';
 import styled from 'styled-components';
 
 class Pillar extends React.Component {
-  state = { zoom: false }
+  state = { zoom: false };
 
   showInfo = () => {
     /* Only runs when window width is greater than 768px */
     if (window.innerWidth >= 768) {
-      this.setState({ zoom: true })
+      this.setState({ zoom: true });
     }
-  }
+  };
 
   hideInfo = () => {
     /* Only runs when window width is greater than 768px */
     if (window.innerWidth >= 768) {
-      this.setState({ zoom: false })
+      this.setState({ zoom: false });
     }
-  }
+  };
 
   render() {
     return (
       <div>
-        <ImageContainer
-          onMouseOver={this.showInfo}
-          onMouseOut={this.hideInfo}
-        >
+        <ImageContainer onMouseOver={this.showInfo} onMouseOut={this.hideInfo}>
           <Image
-            className="lozad"
+            className=""
             data-src={isChrome ? this.props.pillar.image : this.props.pillar.safari}
             alt="Pillar"
             zoom={this.state.zoom}
@@ -63,7 +60,9 @@ const Image = styled.img`
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 
-  ${props => props.zoom && `
+  ${props =>
+    props.zoom &&
+    `
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
@@ -79,7 +78,9 @@ const InfoContainer = styled.div`
   left: 50%;
   opacity: 0;
 
-  ${props => props.zoom && `
+  ${props =>
+    props.zoom &&
+    `
     opacity: 1;
     animation: slideInUp 1s;
     animation-fill-mode: both;
